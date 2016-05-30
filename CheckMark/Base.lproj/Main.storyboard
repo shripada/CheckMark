@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CheckMark" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxm-0J-npQ" customClass="CheckMarkView" customModule="CheckMark" customModuleProvider="target">
+                                <rect key="frame" x="210" y="210" width="180" height="180"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="6e5-cL-VgM"/>
+                                    <constraint firstAttribute="height" constant="180" id="qtk-46-HlK"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="812-wL-CT9">
+                                <rect key="frame" x="20" y="20" width="55" height="30"/>
+                                <state key="normal" title="animate"/>
+                                <connections>
+                                    <action selector="animate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gIW-Qq-cUh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVh-y8-j8A">
+                                <rect key="frame" x="112" y="20" width="30" height="30"/>
+                                <state key="normal" title="hide"/>
+                                <connections>
+                                    <action selector="animate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sA5-8B-S2y"/>
+                                    <action selector="hide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="skt-l8-NRJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gxm-0J-npQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6cV-ma-8st"/>
+                            <constraint firstItem="kVh-y8-j8A" firstAttribute="leading" secondItem="812-wL-CT9" secondAttribute="trailing" constant="37" id="9uz-Cb-pxD"/>
+                            <constraint firstItem="kVh-y8-j8A" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="IX2-sZ-Nbd"/>
+                            <constraint firstItem="gxm-0J-npQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bKJ-Ns-zTW"/>
+                            <constraint firstItem="kVh-y8-j8A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="112" id="j3V-Uy-bKr"/>
+                            <constraint firstItem="kVh-y8-j8A" firstAttribute="baseline" secondItem="812-wL-CT9" secondAttribute="baseline" id="w8k-XG-vTt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="checkMarkView" destination="gxm-0J-npQ" id="ACm-zp-vjj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="356" y="424"/>
+        </scene>
+    </scenes>
+</document>
