@@ -22,6 +22,10 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        checkMarkView.animate()
+    }
 
     @IBAction func animate(sender: AnyObject) {
         
